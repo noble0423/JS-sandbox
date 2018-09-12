@@ -18,12 +18,13 @@
     <!-- <script type="text/javascript" src="assets/js/fizzBuzz.js"></script> -->
     <script type="text/javascript" src="assets/js/chessBoard.js"></script>
     <script type="text/javascript" src="assets/js/minimum.js"></script>
+    <script type="text/javascript" src="assets/js/isEven.js"></script>
 
 </head>
 <body>
     <h1>JavaScript Practice</h1>
 
-    <div id="chessBoard">
+    <div id="chessBoardDiv">
         <h3>Enter the Height and Width of the Console Chessboard you want to create and click submit.</h3>
         <form id="target">
             Height:<br>
@@ -36,7 +37,7 @@
         </form>
     </div>
 
-    <div id="minimum">
+    <div id="minimumDiv">
         <h3>Enter 2 numbers and click submit in order to determine which value is the smaller of the two.</h3>
         <form id="target-minimum">
             Number 1:<br>
@@ -49,8 +50,18 @@
         </form>
     </div>
 
-    <!-- <h3>Start Code in Console by pressing start button.</h3>
+    <div id="isEvenDiv">
+        <h3>Enter a number below and check console to see if it is even or odd.</h3>
+        <form id="target-isEven">
+            Number:<br>
+            <input type="number" id="isEvenNum1" name="number1">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
-    <button id="test-button" class="btn btn-primary btn-lg"><h2><span class="glyphicon glyphicon-play"></span></h2></button> -->
+    <h3>Start Code in Console by pressing start button.</h3>
+
+    <button id="test-button" class="btn btn-primary btn-lg"><h2><span class="glyphicon glyphicon-play"></span></h2></button>
 </body>
 </html>
