@@ -7,8 +7,8 @@ let board = "";
 //============================================================================================
 function chessBoard() {
     console.log("---------------");
-    for (x = 1; x <= $("#boardWidth").val().trim(); x++) {
-        for (y = 1; y <= $("#boardHeight").val().trim(); y++) {
+    for (x = 1; x <= $("#boardHeight").val().trim(); x++) {
+        for (y = 1; y <= $("#boardWidth").val().trim(); y++) {
             if ((x + y) % 2 === 0 ) {
                 board += " ";
             }
