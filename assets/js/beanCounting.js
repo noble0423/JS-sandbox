@@ -6,7 +6,7 @@ count = 0;
 // FUNCTIONS
 //============================================================================================
 function countChars(string) {
-    console.log("Char count ='s " + string.length);
+    console.log("The number of characters in " + string + " is " + string.length + ".");
 }
 
 function countBs(string, ch) {
@@ -15,17 +15,16 @@ function countBs(string, ch) {
             count++
         }
     }
-    console.log(count);
+    console.log("The number of times that " + ch + " appears is " + count + ".");
 }
 
 
 // MAIN PROCESS
 //============================================================================================
 $(document).ready(function() {
-    $("#test-button").on("click", function() {
+    $("#target-beanCounting").on("submit", function() {
         // console.log("clicked");
-        // console.log(("Bagwell, Biggio, Berkman, Bregman".length));
-        // countChars("Bagwell, Biggio, Berkman, Bregman");
-        countBs("Bagwell, Biggio, Berkman, Bregman", "B");
+        countChars($("#beanCountingString").val().trim());
+        countBs($("#beanCountingString").val().trim(), $("#beanCountingChar").val().trim());
     });
 });
