@@ -7,8 +7,6 @@
 //============================================================================================
 // Takes in 2 arguments and returns the minimum
 function minimum (x, y) {
-    // let x = $("#num1").val().trim();
-    // let y = $("#num2").val().trim();
 
     if (parseInt(x) > parseInt(y)) {
         console.log(y + " is the smaller value.");
