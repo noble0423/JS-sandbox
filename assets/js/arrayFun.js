@@ -2,7 +2,8 @@
 //============================================================================================
 var array = [];
 var arrayValues = array.values();
-// var revArray = [];
+var groceries = ["apples", "oranges", "bananas"];
+var officeSupplies = ["pens", "pencils", "paper"];
 
 // FUNCTIONS
 //============================================================================================
@@ -19,7 +20,7 @@ function range(start, end, step) {
             array.push(i);
         }
     }
-    return console.log("var array : [" + array + "]");
+    return array;
 };
 
 function sum(array) {
@@ -29,7 +30,7 @@ function sum(array) {
         total = total + value;
     }
 
-    return console.log("sum of the stepped array is : " + total);
+    return total;
 };
 
 function reverseArray() {
@@ -38,13 +39,52 @@ function reverseArray() {
     for (const num of arrayValues) {
         revArray.unshift(num);
     }
-    // for (let i = 0; i < array.length; i++) {
-    //     revArray.unshift(i);
-    // }
 
-    return console.log("reversed array : [" + revArray + "]");
+    return revArray;
 };
 
+function reverseArray2(array) {
+    let output = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+      output.push(array[i]);
+    }
+    return output;
+  };
+
+function arrayToList() {
+
+};
+
+function prepend(element, list) {
+    
+    list.unshift(element);
+
+    return list;
+    // let newList = [];
+
+    // for (let i = 0; i < list.length; i++) {
+    //     newList.push(list[i]);
+    // }
+    // newList.unshift(element);
+
+    // return newList;
+};
+
+function nth(listName, number) {
+
+    return listName[number];
+};
+
+function nthRecursive(listName, element) {
+
+    for (let i = 0; i < listName.length; i++) {
+        if (listName[i] === element) {
+            return listName.indexOf(element);
+        }
+        else 
+            return("not in list");
+    }
+};
 
 // MAIN PROCESS
 //============================================================================================
@@ -52,9 +92,12 @@ function reverseArray() {
 $(document).ready(function() {
     $("#test-button").on("click", function() {
         // console.log("clicked");
-        // range(2, 10);
-        // sum(range(28, 6, 3));
-        // reverseArray(range(5, 15, 1));
-        reverseArray(range(120, 5, 7));
+        // console.log(range(2, 10, 1));
+        // console.log(sum(range(28, 6, 3)));
+        // console.log(reverseArray(range(120, 5, 7)));
+        // console.log(reverseArray2(["e", 4, "k", 8]));
+        // console.log(prepend("envelopes", officeSupplies));
+        console.log(nth(groceries, 1));
+        // console.log(nthRecursive(officeSupplies, "pencils"));
     });
 });
