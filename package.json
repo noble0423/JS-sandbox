@@ -1,0 +1,25 @@
+{
+  "name": "js-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "threeAnimations.js",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "browserify-fs": "^1.0.0",
+    "three": "^0.97.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noble0423/JS-sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noble0423/JS-sandbox/issues"
+  },
+  "homepage": "https://github.com/noble0423/JS-sandbox#readme"
+}
