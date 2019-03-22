@@ -17,9 +17,12 @@ const timeUp = function() {
     audio.play();
 }
 
-setTimeout(fiveSeconds, 1000 * 5);
-setTimeout(tenSeconds, 1000 * 10);
-setTimeout(timeUp, 1000 * 15);
+$("#clicky").on("click", function() {
+    setTimeout(fiveSeconds, 1000 * 5);
+    setTimeout(tenSeconds, 1000 * 10);
+    setTimeout(timeUp, 1000 * 15);
+});
+
 
 // function fiveSeconds() {
 //     $("#time-left").html("<h2>About 10 seconds left!</h2>");
