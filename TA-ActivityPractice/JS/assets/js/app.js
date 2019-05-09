@@ -118,4 +118,29 @@
     // console.log(coolPeople[5]);
 
 // 
+
+
+// Write a function that takes an array of numbers and returns an array with each number doubled. 
+// Ex:
+// Input: [1,2,3]
+// Output: [2,4,6]
+
+// Input: [-1,-2,-3]
+// Output: [-2, -4, -6]
+
+// const doubleArrayNums = function (numArray) {
+//     const doubledArray = numArray.map(arrayIndex => arrayIndex * 2);
+//     return console.log(doubledArray);
+// }
+
+// array2 = array.map((function (x) { return x * 5; }).bind(this));
+
+// const doubleArrayNums = function (numArray) {
+//     const doubledArray = numArray.map((function(arrayIndex) {
+//         return arrayIndex * 2;
+//     }).bind(this));
+//     console.log(doubledArray);
+// }
+
+// doubleArrayNums([2, 4, 6]);
     
