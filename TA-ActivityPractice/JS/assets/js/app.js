@@ -157,22 +157,22 @@
 // Input: [1,2,3,4,5,6]  function(num){return num > 3}
 // Output: [4,5,6]
 
-// const runFunctionOnArray = function(array, cbFn) {
-//     const newArray = [];
+const runFunctionOnArray = function(array, cbFn) {
+    const newArray = [];
 
-//     for (let i = 0; i <= array.length; i++) {
+    for (let i = 0; i <= array.length; i++) {
 
-//         const cbFnOutput = cbFn(array[i]);
+        const cbFnOutput = cbFn(array[i]);
 
-//         if (cbFnOutput) {
-//             newArray.push(array[i]);
-//         }
-//     }
-//     return console.log(newArray);
-// }
+        if (cbFnOutput) {
+            newArray.push(array[i]);
+        }
+    }
+    return console.log(newArray);
+}
 
-// runFunctionOnArray([1, 2, 3], function(num){return num === 2});
-// runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num){return num % 2 === 0});
-// runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num) {return num >3});
+runFunctionOnArray([1, 2, 3], function(num){return num === 2});
+runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num){return num % 2 === 0});
+runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num) {return num >3});
 
     
