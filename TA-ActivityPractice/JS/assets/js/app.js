@@ -157,22 +157,40 @@
 // Input: [1,2,3,4,5,6]  function(num){return num > 3}
 // Output: [4,5,6]
 
-const runFunctionOnArray = function(array, cbFn) {
-    const newArray = [];
+// const runFunctionOnArray = function(array, cbFn) {
+//     const newArray = [];
 
-    for (let i = 0; i <= array.length; i++) {
+//     for (let i = 0; i <= array.length; i++) {
 
-        const cbFnOutput = cbFn(array[i]);
+//         const cbFnOutput = cbFn(array[i]);
 
-        if (cbFnOutput) {
-            newArray.push(array[i]);
-        }
+//         if (cbFnOutput) {
+//             newArray.push(array[i]);
+//         }
+//     }
+//     return console.log(newArray);
+// }
+
+// runFunctionOnArray([1, 2, 3], function(num){return num === 2});
+// runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num){return num % 2 === 0});
+// runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num) {return num >3});
+
+
+// Function that takes in a number and reverses it
+const numReverse = function (num) {
+    // create empty array
+    let newNum = "";
+
+    // convert num to string
+    const numString = num.toString();
+    
+    // reverse the new string of numbers
+    for (let i = numString.length -1; i >= 0; i--) {
+        newNum += numString[i];
     }
-    return console.log(newArray);
+    console.log(parseInt(newNum));
+
 }
 
-runFunctionOnArray([1, 2, 3], function(num){return num === 2});
-runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num){return num % 2 === 0});
-runFunctionOnArray([1, 2, 3, 4, 5, 6], function(num) {return num >3});
-
+numReverse(456789);
     
