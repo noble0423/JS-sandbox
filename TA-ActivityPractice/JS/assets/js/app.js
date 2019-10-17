@@ -177,20 +177,66 @@
 
 
 // Function that takes in a number and reverses it
-const numReverse = function (num) {
-    // create empty array
-    let newNum = "";
+// const numReverse = function (num) {
+//     // create empty array
+//     let newNum = "";
 
-    // convert num to string
-    const numString = num.toString();
+//     // convert num to string
+//     const numString = num.toString();
     
-    // reverse the new string of numbers
-    for (let i = numString.length -1; i >= 0; i--) {
-        newNum += numString[i];
-    }
-    console.log(parseInt(newNum));
+//     // reverse the new string of numbers
+//     for (let i = numString.length -1; i >= 0; i--) {
+//         newNum += numString[i];
+//     }
+//     console.log(parseInt(newNum));
 
+// }
+
+// numReverse(456789);
+
+// Algo Practice
+// var stuff = [10,34,56,67,93,120,137,168,259,280,311,342,413,514];
+
+// // random_value picks a random number in the stuff array
+// var random_value = stuff[ Math.floor( Math.random() * 14 ) ];
+
+// console.log(stuff);
+// console.log(random_value);
+
+// for (let i = 0; i < stuff.length; i++) {
+//     if (random_value === stuff[i]) {
+//         console.log(i);
+//         console.log (`Random value of ${random_value} was found at index ${i} in the stuff array`);
+//         break;
+//     }
+//     console.log(i);
+// }
+
+
+
+// Write a function that takes in an integer and outputs the sum of all the numbers from 1 to that integer.
+
+// Ex:
+// Input: 2
+// Output: 3 (because 1 + 2 = 3)
+
+// Input: 4
+// Output: 10  (because 1 + 2 + 3 + 4 = 10)
+
+// Input: 10
+// Output: 55
+
+let sum = 0;
+    
+const sumOfAllNums = function(integer) {
+
+    for (let i = 1; i <= integer; i++) {
+
+        sum =+ i;
+    }
+
+    return sum;
 }
 
-numReverse(456789);
-    
+sumOfAllNums(10);
+console.log(sum);
