@@ -226,17 +226,44 @@
 // Input: 10
 // Output: 55
 
-let sum = 0;
+// let sum = 0;
     
-const sumOfAllNums = function(integer) {
+// const sumOfAllNums = function(integer) {
 
-    for (let i = 1; i <= integer; i++) {
+//     for (let i = 1; i <= integer; i++) {
 
-        sum =+ i;
+//         sum =+ i;
+//     }
+
+//     return sum;
+// }
+
+// sumOfAllNums(10);
+// console.log(sum);
+
+
+// Write a function that takes in an array of numbers and outputs the maximum number.
+
+// Ex:
+// Input: [ 1, 2, 3 ]
+// Output: 3
+
+// Input: [ 3, 6, 4, 5, 2, 1 ]
+// Output: 6
+
+// Input: [ 3, 3, 3 ]
+// Output: 3
+
+function maxNumInArr(arr) {
+    let maxNum = arr[0]; 
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > maxNum) {
+            maxNum = arr[i];
+        }
     }
-
-    return sum;
+    console.log(maxNum);
+    return maxNum;
 }
 
-sumOfAllNums(10);
-console.log(sum);
+maxNumInArr([229, 1, 2, 4, 7, 950, 5, 9, 20, 3, -1, 150]);
