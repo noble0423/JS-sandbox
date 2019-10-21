@@ -254,16 +254,74 @@
 // Input: [ 3, 3, 3 ]
 // Output: 3
 
-function maxNumInArr(arr) {
-    let maxNum = arr[0]; 
+// function maxNumInArr(arr) {
+//     let maxNum = arr[0]; 
 
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > maxNum) {
-            maxNum = arr[i];
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] > maxNum) {
+//             maxNum = arr[i];
+//         }
+//     }
+//     console.log(maxNum);
+//     return maxNum;
+// }
+
+// maxNumInArr([229, 1, 2, 4, 7, 950, 5, 9, 20, 3, -1, 150]);
+
+
+// Write a function that takes in a string and outputs the number of vowels (not counting y).
+
+// Ex:
+// Input: "hello"
+// Output: 2
+
+// Input: "you are great!"
+// Output: 6
+
+// Input: "why?"
+// Output: 0
+
+function numVowels(str) {
+    let aCount = 0;
+    let eCount = 0;
+    let iCount = 0;
+    let oCount = 0;
+    let uCount = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "a") {
+            aCount++;
+        }
+        else if (str[i] === "e") {
+            eCount++;
+        }
+        else if (str[i] === "i") {
+            iCount++;
+        }
+        else if (str[i] === "o") {
+            oCount++;
+        }
+        else if (str[i] === "u") {
+            uCount++;
         }
     }
-    console.log(maxNum);
-    return maxNum;
+    
+    if (aCount > 0) {
+        console.log(`There are ${aCount} A/s in this string`);
+    }
+    if (eCount > 0) {
+        console.log(`There are ${eCount} E/s in this string`);
+    }
+    if (iCount > 0) {
+        console.log(`There are ${iCount} I/s in this string`);
+    }
+    if (oCount > 0) {
+        console.log(`There are ${oCount} O/s in this string`);
+    }
+    if (uCount > 0) {
+        console.log(`There are ${uCount} U/s in this string`);
+    }
+
 }
 
-maxNumInArr([229, 1, 2, 4, 7, 950, 5, 9, 20, 3, -1, 150]);
+numVowels("aleleleltuioshqkenfbp");
