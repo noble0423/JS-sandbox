@@ -281,47 +281,96 @@
 // Input: "why?"
 // Output: 0
 
-function numVowels(str) {
-    let aCount = 0;
-    let eCount = 0;
-    let iCount = 0;
-    let oCount = 0;
-    let uCount = 0;
+// function numVowels(str) {
+//     let aCount = 0;
+//     let eCount = 0;
+//     let iCount = 0;
+//     let oCount = 0;
+//     let uCount = 0;
 
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === "a") {
-            aCount++;
-        }
-        else if (str[i] === "e") {
-            eCount++;
-        }
-        else if (str[i] === "i") {
-            iCount++;
-        }
-        else if (str[i] === "o") {
-            oCount++;
-        }
-        else if (str[i] === "u") {
-            uCount++;
-        }
-    }
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === "a") {
+//             aCount++;
+//         }
+//         else if (str[i] === "e") {
+//             eCount++;
+//         }
+//         else if (str[i] === "i") {
+//             iCount++;
+//         }
+//         else if (str[i] === "o") {
+//             oCount++;
+//         }
+//         else if (str[i] === "u") {
+//             uCount++;
+//         }
+//     }
     
-    if (aCount > 0) {
-        console.log(`There are ${aCount} A/s in this string`);
-    }
-    if (eCount > 0) {
-        console.log(`There are ${eCount} E/s in this string`);
-    }
-    if (iCount > 0) {
-        console.log(`There are ${iCount} I/s in this string`);
-    }
-    if (oCount > 0) {
-        console.log(`There are ${oCount} O/s in this string`);
-    }
-    if (uCount > 0) {
-        console.log(`There are ${uCount} U/s in this string`);
-    }
+//     if (aCount > 0) {
+//         console.log(`There are ${aCount} A/s in this string`);
+//     }
+//     if (eCount > 0) {
+//         console.log(`There are ${eCount} E/s in this string`);
+//     }
+//     if (iCount > 0) {
+//         console.log(`There are ${iCount} I/s in this string`);
+//     }
+//     if (oCount > 0) {
+//         console.log(`There are ${oCount} O/s in this string`);
+//     }
+//     if (uCount > 0) {
+//         console.log(`There are ${uCount} U/s in this string`);
+//     }
 
+// }
+
+// numVowels("aleleleltuioshqkenfbp");
+
+
+// Write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise (a palindrome is spelled the same way forwards and backwards).
+
+// Ex:
+// Input: "noon"
+// Output: true
+
+// Input: "horse"
+// Output: false
+
+// Input: "racecar"
+// Output: true
+
+function palindrome(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[str.length - (i + 1)]) {
+            // console.log(true);
+            return true;
+        }
+        // else {
+        //     console.log(false);
+        // }
+    }
+    return false;
 }
 
-numVowels("aleleleltuioshqkenfbp");
+// console.log(palindrome("noyton"));
+
+// palindrome("noyton");
+
+function palindromeOpt(str) {
+    // let pally = str.split("").reverse().join("");
+
+    // if (str === pally) {
+    if (str.toLowerCase() === str.toLowerCase().split("").reverse().join("")) {
+        console.log("this is a palindrome");
+    }
+
+    else {
+        console.log("not a palindrome");
+    }
+
+    // return str.split("").reverse().join("");
+
+    // console.log(pally);
+}
+
+palindromeOpt("Noon");
