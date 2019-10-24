@@ -427,21 +427,47 @@
 //     181, 485, 495, 81, 169, 294, 79, 400, 92, 104, 249
 //   ];
 
-//   const sortedArr = [];
-
 //   let sorted = false;
 
-//   while(!sorted) {
-//       sorted = true;
-
-//       for (let i = 0; i < unsortedArr.length; i++) {
-    
-//         if (unsortedArr[i] > unsortedArr[i + 1]) {
-//             sorted = false;
-//             var temp = unsortedArr[i];
-//             unsortedArr[i] = unsortedArr[i + 1];
-//             unsortedArr[i + 1] = temp;
+//   function bubbleSort(arr) {
+//     while(!sorted) {
+//         sorted = true;
+  
+//         for (let i = 0; i < arr.length; i++) {
+      
+//           if (arr[i] > arr[i + 1]) {
+//               sorted = false;
+//               var temp = arr[i];
+//               arr[i] = arr[i + 1];
+//               arr[i + 1] = temp;
+//           }
 //         }
-//       }
+//     }
+//     return(arr);
 //   }
-//   console.log(unsortedArr);
+
+//   const sortedArr = bubbleSort(unsortedArr);
+//   console.log(sortedArr);
+
+// Write a function that takes in an array of numbers and outputs the average of all the numbers.
+// Ex:
+// Input: [ 1 , 4 , 7 ]
+// Output: 4
+
+// Input: [ 10, 5 ]
+// Output: 7.5
+
+// Input: [ 1.5, 3, 2.5, 1 ]
+// Output: 2
+
+function averageNums(arr) {
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum/(arr.length);
+}
+
+const average = averageNums([1, 2, 4, 8, 5]);
+console.log(average);
