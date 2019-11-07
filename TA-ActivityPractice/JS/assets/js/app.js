@@ -460,14 +460,51 @@
 // Input: [ 1.5, 3, 2.5, 1 ]
 // Output: 2
 
-function averageNums(arr) {
-    let sum = 0;
+// function averageNums(arr) {
+//     let sum = 0;
 
+//     for (let i = 0; i < arr.length; i++) {
+//         sum = sum + arr[i];
+//     }
+//     return sum/(arr.length);
+// }
+
+// const average = averageNums([1, 2, 4, 8, 5]);
+// console.log(average);
+
+
+// Write a function that takes in an array of integers and the array with duplicates removed
+
+// Ex:
+// Input: [1,2,2,3]
+// Output: [1,2,3]
+
+// Input: [4,5,4,4,7,5]
+// Output: [4,5,7]
+
+// Input: [1,2,3,5]
+// Output: [1,2,3,5]
+
+// function that takes in an array
+const removeDupesFromArr = function (arr) {
+
+    // array to hold new array w/ dupes removed
+    const newArrNoDupes = [];
+
+    // loop thru array
     for (let i = 0; i < arr.length; i++) {
-        sum = sum + arr[i];
+
+        // evaluate if there are dupes
+        if (!newArrNoDupes.includes(arr[i])) {
+
+            // push to new array
+            newArrNoDupes.push(arr[i]);
+        }
     }
-    return sum/(arr.length);
+
+    // return new array
+    return newArrNoDupes;
+
 }
 
-const average = averageNums([1, 2, 4, 8, 5]);
-console.log(average);
+console.log(removeDupesFromArr([4, 5, 4, 4, 7, 5]));
