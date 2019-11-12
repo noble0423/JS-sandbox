@@ -486,25 +486,58 @@
 // Output: [1,2,3,5]
 
 // function that takes in an array
-const removeDupesFromArr = function (arr) {
+// const removeDupesFromArr = function (arr) {
 
-    // array to hold new array w/ dupes removed
-    const newArrNoDupes = [];
+//     // array to hold new array w/ dupes removed
+//     const newArrNoDupes = [];
+
+//     // loop thru array
+//     for (let i = 0; i < arr.length; i++) {
+
+//         // evaluate if there are dupes
+//         if (!newArrNoDupes.includes(arr[i])) {
+
+//             // push to new array
+//             newArrNoDupes.push(arr[i]);
+//         }
+//     }
+
+//     // return new array
+//     return newArrNoDupes;
+
+// }
+
+// console.log(removeDupesFromArr([4, 5, 4, 4, 7, 5]));
+
+
+// Write a function that takes 2 parameters - the first is an array, the second is an element that may or may not be in the array. 
+// Without using any built in array methods, return true if the element is in the array or false otherwise. 
+ 
+
+// Ex:
+// Input: [1,2,3]  1
+// Output: true
+
+// Input: [1,2,3]  4
+// Output: false
+
+// Input: ['code', 'dev', 'nerd']  'nerd'
+// Output: false
+
+// Input: ['code', 'dev', 'nerd']  'genius'
+// Output: false
+
+const isItemInArr = function (arr, item) {
 
     // loop thru array
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i <= arr.length; i++) {
 
-        // evaluate if there are dupes
-        if (!newArrNoDupes.includes(arr[i])) {
-
-            // push to new array
-            newArrNoDupes.push(arr[i]);
+        // check to see if item matches item in array at the index of i
+        if (item === arr[i]) {
+            return true;
         }
     }
-
-    // return new array
-    return newArrNoDupes;
-
+    return false;
 }
 
-console.log(removeDupesFromArr([4, 5, 4, 4, 7, 5]));
+console.log(isItemInArr([1, 2, 5, 8, "ryan", 10], "nryan"));
