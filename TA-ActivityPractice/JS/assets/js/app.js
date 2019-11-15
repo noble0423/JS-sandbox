@@ -527,17 +527,49 @@
 // Input: ['code', 'dev', 'nerd']  'genius'
 // Output: false
 
-const isItemInArr = function (arr, item) {
+// const isItemInArr = function (arr, item) {
 
-    // loop thru array
-    for (let i = 1; i <= arr.length; i++) {
+//     // loop thru array
+//     for (let i = 1; i <= arr.length; i++) {
 
-        // check to see if item matches item in array at the index of i
-        if (item === arr[i]) {
-            return true;
-        }
-    }
-    return false;
-}
+//         // check to see if item matches item in array at the index of i
+//         if (item === arr[i]) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
-console.log(isItemInArr([1, 2, 5, 8, "ryan", 10], "nryan"));
+// console.log(isItemInArr([1, 2, 5, 8, "ryan", 10], "nryan"));
+
+
+// Write a function that takes an array of numbers and a function as parameters. The function paremeter should do something to a numbers (increment, double, decrement, etc) and return the result. Your function should return the array that results from applying the function parameter to each element in the number array. 
+
+// Ex:
+// Input: [1,2,3]  function(num){return num * 2*}
+// Output: [2,4,6]
+
+// Input: [1,2,3]  function(num){return num + 1}
+// Output: [2,3,4]
+
+// Input: [1,2,3] function(num) {return num /2}
+// Output: [.5, 1. 1.5]
+
+// Input: [1,2,3] function(num) {return num - 2}
+// Output: [-1, 0, 1]
+
+// const mathOnArr = function (arr, cbFunc) {
+
+//     const newArrAfterMath = [];
+
+//     for (let i=0; i < arr.length; i++) {
+//         newArrAfterMath.push(cbFunc(arr[i]));
+//     }
+
+//     return newArrAfterMath;
+// }
+
+// console.log(mathOnArr([1, 3, 5], (a) => a * 2));
+// console.log(mathOnArr([20, 40, 80], function divide(elem) {
+//     return elem / 5;
+// }))
